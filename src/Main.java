@@ -1,4 +1,10 @@
 public class Main {
     public static void main(String[] args) {
+        Author author1 = new Author("Joe","Smith");
+        Author author2 = new Author("Jim","Beam");
+        Book one = new Book("Book1", author1, 2012);
+        Book two = new Book("Book2", author2, 2222);
+        System.out.println("Название книги - "+one.getTitle()+". Автор книги - "+one.getAuthor().getName()+" "+one.getAuthor().getSecondName()+". Год публикации - "+one.getYear());
+
     }
 }
