@@ -32,15 +32,15 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(title, author);
+        return java.util.Objects.hash(title, author, year);
     }
 
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+        if (this.getClass() != other.getClass() || other == null) {
             return false;
         }
         Book c2 = (Book) other;
-        return title.equals(c2.title);
+        return title.equals(c2.title) && author.equals(c2.author);
     }
 }
